@@ -9,9 +9,8 @@ sys.path.insert(0, "/reg/g/pcds/pyps/apps/hutch-python/tst")
 
 # Do the normal hutch-python loading
 set_sim_mode(True)
-cfg = '/cds/group/pcds/pyps/apps/hutch-python/tst/conf.yml'
-setup_logging(dir_logs=os.path.join(os.path.dirname(cfg), 'logs'))
-objs = load(cfg=cfg)
+setup_logging()
+objs = load(cfg="/cds/group/pcds/pyps/apps/hutch-python/tst/conf.yml")
 
 # Make some post-adjustments for queue-server
 # Disable the bec plots for the server process (keep the table)
