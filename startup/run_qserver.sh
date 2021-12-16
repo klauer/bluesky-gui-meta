@@ -15,4 +15,6 @@ echo "Running the queue server..."
 # may segfault:
 export MPLBACKEND=Agg
 
-start-re-manager --startup-dir . --databroker-config qserver_test
+# bluesky-0MQ-proxy 6615 61115
+
+start-re-manager --startup-dir . --databroker-config qserver_test --zmq-data-proxy-addr localhost:6615
